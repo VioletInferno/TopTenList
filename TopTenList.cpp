@@ -7,15 +7,15 @@ using std::string;
 
 TopTenList::TopTenList()
 {
-
+    _list.resize(10);  // technique is called delegation
 }
 
-void TopTenList::set_at(int index, Hyperlink link)
+void TopTenList::set_at(int index, HyperLink link)
 {
-
+    _list.at(index - 1) = link;
 }
 
-Hyperlink TopTenList::get(int index)
+HyperLink TopTenList::get(int index)
 {
-
+    _list.at(index - 1);
 }

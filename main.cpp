@@ -8,11 +8,14 @@ using std::cout;
 int main()
 {
     TopTenList* languages = new TopTenList();
-    Hyperlink cpp;
+    HyperLink cpp;
 
     cpp.text = "C++";
     cpp.url = "https://www.cplusplus.com/";
     languages->set_at(1, cpp);
+
+    // line below is arguably an antipattern
+    //languages->resize(100);
 
     return 0;
 }

@@ -8,13 +8,15 @@
 using std::string;
 using std::vector;
 
-class TopTenList
+class TopTenList : public vector <HyperLink>
 {
   private:
+    vector <HyperLink> _list;
 
   public:
-    void set_at(int index, Hyperlink link);
-    Hyperlink get(int index);
+    TopTenList();
+    void set_at(int index, HyperLink link);
+    HyperLink get(int index);
 };
 
 #endif

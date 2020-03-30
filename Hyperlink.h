@@ -3,7 +3,7 @@
 #include <string>
 //Manages the text and URL of a hyperlink
 
-struct Hyperlink
+struct HyperLink
 {
     std::string text;
     std::string url;
