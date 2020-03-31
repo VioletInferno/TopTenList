@@ -8,11 +8,6 @@ TopTenList::TopTenList()
     _list.resize(10);  // technique is called delegation
 }
 
-void TopTenList::set_at(int index, HyperLink link)
-{
-    _list.at(index - 1) = link;
-}
-
 void TopTenList::display_forward()
 {
     for (int i = 0; i < _list.size(); i++)
@@ -30,6 +25,11 @@ void TopTenList::display_backward()
         cout << _list.size() - i + 1 << ") " << links.text << " " << links.url << endl;
     }
 }  
+
+void TopTenList::set_at(int index, HyperLink link)
+{
+    _list.at(index - 1) = link;
+}
 
 HyperLink TopTenList::get(int index)
 {
