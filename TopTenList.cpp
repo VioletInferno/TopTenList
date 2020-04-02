@@ -13,7 +13,8 @@ void TopTenList::display_forward()
     for (int i = 0; i < _list.size(); i++)
     {
         HyperLink links = _list[i];
-        cout << i + 1 << ") " << links.text << " " << links.url << endl;
+        cout << i + 1 << " of " << _list.size() << ") " 
+             << links.text << " " << links.url << endl;
     }
 }   
 
@@ -22,7 +23,8 @@ void TopTenList::display_backward()
     for (int i = 1; i <= _list.size(); i++)
     {
         HyperLink links = _list[_list.size() - i];
-        cout << _list.size() - i + 1 << ") " << links.text << " " << links.url << endl;
+        cout << _list.size() - i + 1 << " of " << _list.size() << ") " 
+             << links.text << " " << links.url << endl;
     }
 }  
 
